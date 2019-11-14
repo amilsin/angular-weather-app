@@ -1,0 +1,13 @@
+<!-- Main Search Form to Input Zip Code -->
+<div class="main-content col-xs-12 col-sm-8">
+    <h1> Weather App</h1>
+    <div class="form-group">
+        <label for="searchForm" class="search-label">Enter Zip Code</label>
+        <input #searchForm>
+    </div>
+    <button (click)="weatherLookUp(searchForm.value)">Submit</button>
+    <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+</div>
+
+<!-- Report Template Rendering -->
+<app-report [weatherReport]="weatherReport"></app-report>
