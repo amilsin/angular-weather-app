@@ -1,0 +1,19 @@
+<div *ngIf="weatherReport">
+    <div class="col-xs-12 col-sm-8 title">
+        <h2>Weather Report for {{weatherReport.name}}</h2>
+    </div>
+    <div class="col-xs-12 col-sm-8 temprature-section">
+        <div class="col-xs-12 temprature" >{{weatherReport.temp}}°F
+            <span><img src="http://openweathermap.org/img/w/{{weatherReport.icon}}.png"></span>
+        </div>
+        <div class="col-xs-6 temprature-lable">Humidity</div>
+        <div class="col-xs-6 temprature-value">{{weatherReport.humidity}}</div>
+
+        <div class="col-xs-6 temprature-lable">Temprature Min/Max</div>
+        <div class="col-xs-6 temprature-value">{{weatherReport.temp_min}}°/{{weatherReport.temp_max}}°</div>
+        
+        <div class="col-xs-6 temprature-lable">Wind Speed</div>
+        <div class="col-xs-6 temprature-value">{{weatherReport.wind_speed}}</div>
+
+    </div>
+</div>
